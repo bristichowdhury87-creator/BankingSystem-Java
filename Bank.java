@@ -1,29 +1,25 @@
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Bank {
-    private ArrayList<Account> accounts = new ArrayList<>();
-    
-    // Your job: Create account method. I'll give structure
+    private HashMap<Integer, Account> accounts = new HashMap<>();
+
     public void createAccount(int accNumber, String name, double initialBalance) {
+        if(accounts.containsKey(accNumber)){
+            return;
+        }
+
         Account newAcc = new Account(accNumber, name, initialBalance);
-        accounts.add(newAcc);
-        System.out.println("Account created successfully!");
+        accounts.put(accNumber, newAcc);
+        System.out.println(" Account created successfully!");
     }
-    
+
     public Account findAccount(int accNumber) {
-        for (int i = 0; i< accounts.size(); i++) {
-            Account acc = accounts.get(i);
-            if(acc.getAccNumber() == accNumber)
-            return acc;
-    } 
-            return null; 
-   }
+        if(accounts.containsKey(accNumber)){
+            return accounts.get(accNumber);
+        }
+        else{
 
-public void displayAllAccounts(){
-    for(int i = 0; i< accounts.size(); i++){
-        Account acc = accounts.get(i);
-        acc.displayAccount();
+            return null;
+        }
     }
 }
-}
-
