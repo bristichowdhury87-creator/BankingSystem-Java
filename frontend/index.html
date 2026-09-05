@@ -8,21 +8,51 @@
 </head>
 <body>
   
- <div class="login-box">
+<div class="login-box">
     <h1>Banking Management System</h1>
     <p><h3>Welcome Back! Please Login</h3></p>
     <label>
-        <input type ="text" placeholder ="Enter Account Number">
+        <input type="text" id="acc-input" placeholder="Enter Account Number">
     </label>
-    <br>
-    <br>
+    <br><br>
+    <button id="login-btn">Login</button>
+    <br><br>
+    <p>New here? <a href="#" id="show-create">Create an account</a></p>
+</div>
+<div class="create-box" style="display:none;">
+    <h1>Create New Account</h1>
     <label>
-        <input type ="password" placeholder ="Enter password">
+        <input type="text" id="new-acc-number" placeholder="Choose Account Number">
     </label>
-    <br>
-    <br>
-     <button>Login</button>
- </div> 
-    <script src="script.js"></script>  
+    <br><br>
+    <label>
+        <input type="text" id="new-acc-name" placeholder="Enter Your Name">
+    </label>
+    <br><br>
+    <label>
+        <input type="number" id="new-acc-balance" placeholder="Initial Deposit Amount">
+    </label>
+    <br><br>
+    <button id="create-btn">Create Account</button>
+</div>
+
+<div class="dashboard" style="display:none;">
+    <h3>Transaction History</h3>
+    <ul id="transaction-list"></ul>
+    <h1>Welcome, <span id="user-name"></span></h1>
+    <h3>Balance: ₹<span id="user-balance"></span></h3>
+
+    <label>
+        <input type="number" id="deposit-amount" placeholder="Deposit amount">
+    </label>
+    <button id="deposit-btn">Deposit</button>
+    <br><br>
+    <label>
+        <input type="number" id="withdraw-amount" placeholder="Withdraw amount">
+    </label>
+    <button id="withdraw-btn">Withdraw</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

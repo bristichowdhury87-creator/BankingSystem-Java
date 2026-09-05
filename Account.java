@@ -6,6 +6,10 @@ public class Account {
     private String name;
     private double balance;
     private ArrayList<String> transactions = new ArrayList<String>();
+    
+    public ArrayList<String> getTransactions() {
+    return transactions;
+}
 
     public Account(int accNumber, String name, double balance) {
         this.accNumber = accNumber;
