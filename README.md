@@ -18,8 +18,7 @@ A full-stack banking application built with **Java** on the backend and **HTML, 
 - **Communication:** Browser and server exchange plain-text messages over HTTP using the Fetch API — requests are sent in `application/x-www-form-urlencoded` format, and responses are simple colon/pipe-separated strings (e.g. `SUCCESS:Test User:1000`) rather than JSON
 
 ## Project Structure
-
-## Project Structure
+```
 
 BankingSystem/
 ├── Server.java        # HTTP server — routes requests to the right handler
@@ -29,6 +28,7 @@ BankingSystem/
 ├── index.html           # Frontend markup
 ├── style.css             # Frontend styling
 └── script.js             # Frontend logic — fetch calls, DOM updates, event handling
+```
 
 
 ## API Endpoints
