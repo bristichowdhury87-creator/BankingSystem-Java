@@ -43,7 +43,7 @@ BankingSystem/
 
 
 ## How to Run
-1. git clone <repo-url>
+1. git clone https://github.com/bristichowdhury87-creator/BankingSystem-Java.git
 2. cd BankingSystem
 3. javac *.java
 4. java Server
